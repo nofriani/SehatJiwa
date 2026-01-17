@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Mental Health Theme - Soft, Calming, Trustworthy */
+  /* Primary: Calming Teal/Green */
+  --primary: 174 42% 51%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Soft Sage/Blue */
+  --secondary: 180 20% 96%;
+  --secondary-foreground: 174 42% 30%;
+  
+  /* Accent: Warm Coral/Peach for highlights */
+  --accent: 14 80% 70%;
+  --accent-foreground: 0 0% 100%;
+
+  /* Backgrounds */
+  --background: 180 25% 98%;
+  --foreground: 215 25% 27%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 27%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 25% 27%;
+  
+  --muted: 180 10% 92%;
+  --muted-foreground: 215 15% 50%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 180 10% 90%;
+  --input: 180 10% 90%;
+  --ring: 174 42% 51%;
+
+  --radius: 1rem;
+
+  --font-display: 'Comfortaa', display;
+  --font-body: 'Nunito', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-slate-800;
+  }
+}
+
+/* Custom Utilities for Polish */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
